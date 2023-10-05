@@ -70,19 +70,20 @@ body {
 
 /* Elementos iguales a ambos lados */
 
-.controles-izq{
+.controles-izq {
   position: relative;
   width: 7.2em;
   height: 13em;
 }
 
-.controles-dcha{
+.controles-dcha {
   position: relative;
   width: 7.2em;
   height: 13em;
-  top: -23.6em;
-  left: 33em ;
+  top: -27.6em;
+  left: 33em;
 }
+
 .altavoz {
   position: relative;
   width: 1.25em;
@@ -93,23 +94,238 @@ body {
     -1px 0 0 0 #ccc inset;
 }
 
+.pantalla {
+  position: relative;
+  margin: 0;
+  width: 25.3em;
+  height: 13.5em;
+  top: -17em;
+  left: 7.4em;
+  background-color: black;
+}
+
 /* Controles y botones izquierdos */
-.alt-izq{
+.alt-izq {
   top: -1.8em;
   left: 5em;
 }
 
+.btns-direcciones {
+  position: absolute;
+  width: 5.7em;
+  height: 5.7em;
+  top: 0em;
+  left: 1.2em;
+  border-radius: 50%;
+  border: 2px solid #b5b5b5;
+  background-color: #f7f7f3;
+}
+
+.joystick {
+  position: absolute;
+  width: 3em;
+  height: 3em;
+  top: 6.5em;
+  left: 3em;
+  border-radius: 50%;
+  border: 1px solid #ccc;
+  background-color: #f1f1ea;
+  box-shadow: -0.5px 0px 0 0 #60646e, 0.5px 0.5px 0 0 #60646e,
+    1px 1px 0 0 #6c707c;
+}
+
+.indicador-memoria {
+  position: relative;
+  width: 0.3em;
+  height: 0.3em;
+  top: 6em;
+  left: 0.6em;
+  border-radius: 50%;
+  background-color: #60646e;
+}
+
+.indicador-wifi {
+  position: relative;
+  width: 0.3em;
+  height: 0.3em;
+  top: 7.5em;
+  left: 1.1em;
+  border-radius: 50%;
+  background-color: #60646e;
+}
+
 /* Controles y botones derechos */
-.alt-dcha{
-  top: -4em;
+.text-sony {
+  position: relative;
+  margin: 0;
+  top: -30em;
+  left: -3.8em;
+  text-align: right;
+  font-family: serif;
+  font-weight: bold;
+  color: #a1a4ad;
+}
+
+.alt-dcha {
+  top: -2em;
   left: 1em;
 }
 
+.btns-iconos {
+  position: absolute;
+  width: 5.7em;
+  height: 5.7em;
+  top: 0em;
+  left: 0em;
+  border-radius: 50%;
+  border: 2px solid #b5b5b5;
+  background-color: #f7f7f3;
+}
+
+.indicador-power {
+  position: relative;
+  width: 0.3em;
+  height: 0.3em;
+  top: 6.3em;
+  left: 6em;
+  border-radius: 50%;
+  background-color: #60646e;
+}
+
+.text-power {
+  position: relative;
+  top: 10.5em;
+  left: 7.5em;
+  font-size: 0.5em;
+  color: #60646e;
+}
+
+.indicador-hold {
+  position: relative;
+  width: 0.3em;
+  height: 0.3em;
+  top: 6.2em;
+  left: 5.5em;
+  border-radius: 50%;
+  background-color: #60646e;
+}
+
+.text-hold {
+  position: relative;
+  top: 10.3em;
+  left: 7.5em;
+  font-size: 0.5em;
+  color: #60646e;
+}
 /* Botones y controles inferiores */
-.controles-inf{
+.controles-inf {
   position: relative;
   width: 25.8em;
   height: 2em;
-  top: -27.5em;
+  top: -30.7em;
   left: 7.2em;
+}
+
+.btn-home {
+  position: relative;
+  width: 2em;
+  height: 1.3em;
+  top: 0.1em;
+  border-radius: 40% / 80%;
+  border: 2px solid #b5b5b5;
+  background-color: #f7f7f3;
+}
+
+.btn-vol-bajar {
+  position: relative;
+  width: 1.3em;
+  height: 0.7em;
+  top: -1em;
+  left: 3em;
+  border-radius: 40% / 80%;
+  border: 2px solid #b5b5b5;
+  background-color: #f7f7f3;
+}
+
+.text-vol {
+  position: relative;
+  top: -3.3em;
+  left: 6em;
+  font-size: 0.8em;
+  color: #60646e;
+}
+
+.btn-vol-subir {
+  position: relative;
+  width: 1.3em;
+  height: 0.7em;
+  top: -4.5em;
+  left: 6.6em;
+  border-radius: 40% / 80%;
+  border: 2px solid #b5b5b5;
+  background-color: #f7f7f3;
+}
+
+.icono-psp {
+  position: relative;
+  top: -5.5em;
+  left: 9em;
+}
+.btn-display {
+  position: relative;
+  width: 1.3em;
+  height: 0.7em;
+  top: -6.6em;
+  left: 16em;
+  border-radius: 40% / 80%;
+  border: 2px solid #b5b5b5;
+  background-color: #f7f7f3;
+}
+
+.btn-mute {
+  position: relative;
+  width: 1.3em;
+  height: 0.7em;
+  top: -7.6em;
+  left: 18em;
+  border-radius: 40% / 80%;
+  border: 2px solid #b5b5b5;
+  background-color: #f7f7f3;
+}
+
+.btn-select {
+  position: relative;
+  width: 2em;
+  height: 1.3em;
+  top: -9.1em;
+  left: 20.5em;
+  border-radius: 40% / 80%;
+  border: 2px solid #b5b5b5;
+  background-color: #f7f7f3;
+}
+
+.text-select {
+  position: relative;
+  top: -0.2em;
+  font-size: 0.5em;
+  color: #60646e;
+}
+
+.btn-start {
+  position: relative;
+  width: 2em;
+  height: 1.3em;
+  top: -10.6em;
+  left: 23.5em;
+  border-radius: 40% / 80%;
+  border: 2px solid #b5b5b5;
+  background-color: #f7f7f3;
+}
+
+.text-start {
+  position: relative;
+  top: -0.2em;
+  left: 0.5em;
+  font-size: 0.5em;
+  color: #60646e;
 }
