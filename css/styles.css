@@ -2,9 +2,12 @@ body {
   width: 99%;
   display: flex;
   justify-content: center;
-  margin-top: 10em;
+  margin-top: 12em;
   font-family: sans-serif;
-  background-color: #222;
+  background-color: #777;
+  @media (max-width: 420px) {
+    transform: rotate(90deg);
+  }
 }
 
 .container-psp,
@@ -185,7 +188,7 @@ body {
   left: 0.6em;
   border-radius: 50%;
   background-color: #60646e;
-  .icono-bateria{
+  .icono-bateria {
     position: relative;
     width: 0.8em;
     top: -0.4em;
@@ -200,7 +203,7 @@ body {
   left: 1.1em;
   border-radius: 50%;
   background-color: #60646e;
-  .icono-wifi{
+  .icono-wifi {
     position: relative;
     width: 0.8em;
     top: -0.4em;
@@ -254,6 +257,9 @@ body {
   align-items: center;
   bottom: 0.1em;
   left: 1.9em;
+  .icono-cruz {
+    width: 2.7em;
+  }
 }
 .cuadrado {
   display: flex;
@@ -310,7 +316,7 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
-  .text-home{
+  .text-home {
     font-size: 0.5em;
     color: #60646e;
   }
@@ -327,7 +333,7 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
-  .text-min{
+  .text-min {
     position: relative;
     top: -0.1em;
     font-size: 1em;
@@ -351,7 +357,7 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
-  .text-max{
+  .text-max {
     position: relative;
     top: -0.1em;
     font-size: 1em;
@@ -372,7 +378,7 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
-  .icono-wifi-off{
+  .icono-wifi-off {
     position: relative;
     width: 0.7em;
     top: -0.2em;
@@ -387,7 +393,7 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
-  .icono-mute{
+  .icono-mute {
     position: relative;
     width: 0.7em;
     top: -0.2em;
