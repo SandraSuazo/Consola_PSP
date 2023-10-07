@@ -57,15 +57,21 @@ body {
     -1px 0 0 0 #ccc inset;
 }
 
+.icono-play {
+  position: absolute;
+  top: -3em;
+  left: 2em;
+}
+
 .text-sony {
   position: relative;
   margin: 0;
   top: -30em;
-  left: -3.8em;
+  left: -3em;
   text-align: right;
   font-family: serif;
   font-weight: bold;
-  color: #a1a4ad;
+  color: black;
 }
 
 /* Marco exterior PSP*/
@@ -125,7 +131,7 @@ body {
   position: absolute;
   width: 1.6em;
   height: 1.9em;
-  border: 1px solid rgba(34, 34, 34, 0.3);
+  border: 1px solid #b5b5b5;
   clip-path: polygon(100% 10%, 0 10%, 0 68%, 30% 100%, 70% 100%, 100% 70%);
   background-color: #f1f1ea;
 }
@@ -137,16 +143,25 @@ body {
   top: 1.8em;
   right: 0.1em;
   transform: rotate(90deg);
+  .btn-dcha {
+    transform: rotate(-90deg);
+  }
 }
 .abajo {
   bottom: -0.1em;
   left: 2em;
   transform: rotate(180deg);
+  .btn-abajo {
+    transform: rotate(180deg);
+  }
 }
 .izq {
   top: 1.8em;
   left: 0.1em;
   transform: rotate(-90deg);
+  .btn-izq {
+    transform: rotate(90deg);
+  }
 }
 
 .joystick {
@@ -162,7 +177,7 @@ body {
   background-color: #f1f1ea;
 }
 
-.indicador-memoria {
+.indicador-bateria {
   position: absolute;
   width: 0.3em;
   height: 0.3em;
@@ -170,6 +185,12 @@ body {
   left: 0.6em;
   border-radius: 50%;
   background-color: #60646e;
+  .icono-bateria{
+    position: relative;
+    width: 0.8em;
+    top: -0.4em;
+    left: 0.6em;
+  }
 }
 .indicador-wifi {
   position: absolute;
@@ -179,6 +200,13 @@ body {
   left: 1.1em;
   border-radius: 50%;
   background-color: #60646e;
+  .icono-wifi{
+    position: relative;
+    width: 0.8em;
+    top: -0.4em;
+    left: 0.4em;
+    transform: rotate(45deg);
+  }
 }
 
 /* Controles y botones derechos */
@@ -198,27 +226,39 @@ body {
   background-color: #f7f7f3;
 }
 
-.btn-icono{
+.btn-icono {
   position: absolute;
   width: 1.9em;
   height: 1.9em;
   border-radius: 50%;
-  border: 0.5px solid rgba(108, 112, 124, 0.3);
+  border: 0.5px solid #b5b5b5;
   background-color: #f1f1ea;
 }
-.triangulo{
+.triangulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 0.1em;
   left: 1.9em;
 }
-.circulo{
+.circulo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 1.9em;
   right: 0.1em;
 }
-.cruz{
+.cruz {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   bottom: 0.1em;
   left: 1.9em;
 }
-.cuadrado{
+.cuadrado {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   top: 1.9em;
   left: 0.1em;
 }
@@ -233,12 +273,12 @@ body {
   left: 6em;
   border-radius: 50%;
   background-color: #60646e;
-}
-.text-power {
-  position: absolute;
-  left: -4em;
-  font-size: 0.5em;
-  color: #60646e;
+  .text-power {
+    position: absolute;
+    left: -4em;
+    font-size: 0.5em;
+    color: #60646e;
+  }
 }
 
 .indicador-hold {
@@ -251,32 +291,48 @@ body {
   left: 5.3em;
   border-radius: 50%;
   background-color: #60646e;
-}
-.text-hold {
-  position: absolute;
-  left: -3em;
-  font-size: 0.5em;
-  color: #60646e;
+  .text-hold {
+    position: absolute;
+    left: -3em;
+    font-size: 0.5em;
+    color: #60646e;
+  }
 }
 /* Botones y controles inferiores */
 
 .btn-home {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 2em;
   height: 1.3em;
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
+  .text-home{
+    font-size: 0.5em;
+    color: #60646e;
+  }
 }
 
 .btn-vol-bajar {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1.3em;
   height: 0.7em;
   left: 3em;
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
+  .text-min{
+    position: relative;
+    top: -0.1em;
+    font-size: 1em;
+    color: #60646e;
+  }
 }
 .text-vol {
   position: absolute;
@@ -286,20 +342,29 @@ body {
 }
 .btn-vol-subir {
   position: absolute;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 1.3em;
   height: 0.7em;
   left: 6.6em;
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
+  .text-max{
+    position: relative;
+    top: -0.1em;
+    font-size: 1em;
+    color: #60646e;
+  }
 }
 
 .icono-psp {
   position: absolute;
-  left: 9em;
+  left: 10.2em;
 }
 
-.btn-display {
+.btn-wifi-off {
   position: absolute;
   width: 1.3em;
   height: 0.7em;
@@ -307,6 +372,12 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
+  .icono-wifi-off{
+    position: relative;
+    width: 0.7em;
+    top: -0.2em;
+    left: 0.3em;
+  }
 }
 .btn-mute {
   position: absolute;
@@ -316,6 +387,12 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
+  .icono-mute{
+    position: relative;
+    width: 0.7em;
+    top: -0.2em;
+    left: 0.3em;
+  }
 }
 
 .btn-select {
@@ -329,6 +406,10 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
+  .text-select {
+    font-size: 0.5em;
+    color: #60646e;
+  }
 }
 .btn-start {
   display: flex;
@@ -341,9 +422,8 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
-}
-.text-select,
-.text-start {
-  font-size: 0.5em;
-  color: #60646e;
+  .text-start {
+    font-size: 0.5em;
+    color: #60646e;
+  }
 }
