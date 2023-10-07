@@ -1,87 +1,50 @@
 body {
-  width: 100%;
-  height: 100%;
+  width: 99%;
   display: flex;
   justify-content: center;
+  margin-top: 10em;
   font-family: sans-serif;
   background-color: #222;
 }
 
-.container-psp {
+.container-psp,
+.psp {
+  position: static;
   width: 40em;
   height: 17em;
-  margin-top: 10em;
   border-radius: 10% / 50%;
   background-color: #fbfbf9;
 }
-
-/* Marco exterior PSP*/
-.esquinas {
-  width: 4.5em;
-  height: 1.25em;
-  display: flex;
-}
-.esq-arriba-izq {
-  position: relative;
-  left: 1.9em;
-  border-radius: 60% 0 / 150% 0;
-  box-shadow: -1px -1px 0 0 rgba(204, 204, 204, 0.8) inset;
-  background-color: #f1f1ea;
-}
-
-.esq-arriba-dcha {
-  position: relative;
-  top: -1.3em;
-  left: 33.5em;
-  border-radius: 0 60% / 0 150%;
-  box-shadow: 1px -1px 0 0 rgba(204, 204, 204, 0.8) inset;
-  background-color: #f1f1ea;
-}
-
-.esq-abajo-izq {
-  position: relative;
-  bottom: -13.3em;
-  left: 1.9em;
-  border-radius: 0 60% / 0 150%;
-  box-shadow: -1px 1px 0 0 rgba(204, 204, 204, 0.8) inset;
-  background-color: #e7e7da;
-  &::before {
-    content: "";
-    position: relative;
-    top: 0.4em;
-    left: 0.8em;
-    width: 3em;
-    height: 0.6em;
-    border-radius: 0 60% / 0 150%;
-    background-color: #111;
-  }
-}
-
-.esq-abajo-dcha {
-  position: relative;
-  bottom: -12em;
-  left: 33.5em;
-  border-radius: 60% 0 / 150% 0;
-  box-shadow: 1px 1px 0 0 rgba(204, 204, 204, 0.8) inset,
-    2px 2px 0 0 rgba(204, 204, 204, 0.8) inset,
-    3px 3px 0 0 rgba(204, 204, 204, 0.8) inset, -10px -1px 0 0 #111 inset;
-  background-color: #111;
-}
-
-/* Elementos iguales a ambos lados */
 
 .controles-izq {
   position: relative;
   width: 7.2em;
   height: 13em;
 }
-
 .controles-dcha {
   position: relative;
   width: 7.2em;
   height: 13em;
   top: -27.6em;
   left: 33em;
+}
+.controles-inf {
+  display: flex;
+  align-items: center;
+  position: relative;
+  width: 25.8em;
+  height: 2em;
+  top: -30.7em;
+  left: 7.2em;
+}
+
+.pantalla {
+  position: relative;
+  width: 25.3em;
+  height: 13.5em;
+  top: -17em;
+  left: 7.4em;
+  background-color: black;
 }
 
 .altavoz {
@@ -94,14 +57,51 @@ body {
     -1px 0 0 0 #ccc inset;
 }
 
-.pantalla {
+.text-sony {
   position: relative;
   margin: 0;
-  width: 25.3em;
-  height: 13.5em;
-  top: -17em;
-  left: 7.4em;
-  background-color: black;
+  top: -30em;
+  left: -3.8em;
+  text-align: right;
+  font-family: serif;
+  font-weight: bold;
+  color: #a1a4ad;
+}
+
+/* Marco exterior PSP*/
+.esquinas {
+  position: relative;
+  width: 4.5em;
+  height: 1.25em;
+}
+.esq-arriba-izq {
+  left: 1.9em;
+  border-radius: 60% 0 / 150% 0;
+  box-shadow: -1px -1px 0 0 rgba(204, 204, 204, 0.8) inset;
+  background-color: #f1f1ea;
+}
+.esq-arriba-dcha {
+  top: -1.3em;
+  left: 33.5em;
+  border-radius: 0 60% / 0 150%;
+  box-shadow: 1px -1px 0 0 rgba(204, 204, 204, 0.8) inset;
+  background-color: #f1f1ea;
+}
+.esq-abajo-izq {
+  bottom: -13.3em;
+  left: 1.9em;
+  border-radius: 0 60% / 0 150%;
+  box-shadow: -1px 1px 0 0 rgba(204, 204, 204, 0.8) inset;
+  background-color: #e7e7da;
+}
+.esq-abajo-dcha {
+  bottom: -12em;
+  left: 33.5em;
+  border-radius: 60% 0 / 150% 0;
+  box-shadow: 1px 1px 0 0 rgba(204, 204, 204, 0.8) inset,
+    2px 2px 0 0 rgba(204, 204, 204, 0.8) inset,
+    3px 3px 0 0 rgba(204, 204, 204, 0.8) inset, -10px -1px 0 0 #111 inset;
+  background-color: #111;
 }
 
 /* Controles y botones izquierdos */
@@ -121,6 +121,34 @@ body {
   background-color: #f7f7f3;
 }
 
+.btn-direccion {
+  position: absolute;
+  width: 1.6em;
+  height: 1.9em;
+  border: 1px solid rgba(34, 34, 34, 0.3);
+  clip-path: polygon(100% 10%, 0 10%, 0 68%, 30% 100%, 70% 100%, 100% 70%);
+  background-color: #f1f1ea;
+}
+.arriba {
+  top: -0.1em;
+  left: 2em;
+}
+.dcha {
+  top: 1.8em;
+  right: 0.1em;
+  transform: rotate(90deg);
+}
+.abajo {
+  bottom: -0.1em;
+  left: 2em;
+  transform: rotate(180deg);
+}
+.izq {
+  top: 1.8em;
+  left: 0.1em;
+  transform: rotate(-90deg);
+}
+
 .joystick {
   position: absolute;
   width: 3em;
@@ -129,13 +157,13 @@ body {
   left: 3em;
   border-radius: 50%;
   border: 1px solid #ccc;
-  background-color: #f1f1ea;
   box-shadow: -0.5px 0px 0 0 #60646e, 0.5px 0.5px 0 0 #60646e,
     1px 1px 0 0 #6c707c;
+  background-color: #f1f1ea;
 }
 
 .indicador-memoria {
-  position: relative;
+  position: absolute;
   width: 0.3em;
   height: 0.3em;
   top: 6em;
@@ -143,9 +171,8 @@ body {
   border-radius: 50%;
   background-color: #60646e;
 }
-
 .indicador-wifi {
-  position: relative;
+  position: absolute;
   width: 0.3em;
   height: 0.3em;
   top: 7.5em;
@@ -155,17 +182,6 @@ body {
 }
 
 /* Controles y botones derechos */
-.text-sony {
-  position: relative;
-  margin: 0;
-  top: -30em;
-  left: -3.8em;
-  text-align: right;
-  font-family: serif;
-  font-weight: bold;
-  color: #a1a4ad;
-}
-
 .alt-dcha {
   top: -2em;
   left: 1em;
@@ -182,84 +198,96 @@ body {
   background-color: #f7f7f3;
 }
 
+.btn-icono{
+  position: absolute;
+  width: 1.9em;
+  height: 1.9em;
+  border-radius: 50%;
+  border: 0.5px solid rgba(108, 112, 124, 0.3);
+  background-color: #f1f1ea;
+}
+.triangulo{
+  top: 0.1em;
+  left: 1.9em;
+}
+.circulo{
+  top: 1.9em;
+  right: 0.1em;
+}
+.cruz{
+  bottom: 0.1em;
+  left: 1.9em;
+}
+.cuadrado{
+  top: 1.9em;
+  left: 0.1em;
+}
+
 .indicador-power {
-  position: relative;
+  position: absolute;
+  display: flex;
+  align-items: center;
   width: 0.3em;
   height: 0.3em;
-  top: 6.3em;
+  top: 6.7em;
   left: 6em;
   border-radius: 50%;
   background-color: #60646e;
 }
-
 .text-power {
-  position: relative;
-  top: 10.5em;
-  left: 7.5em;
+  position: absolute;
+  left: -4em;
   font-size: 0.5em;
   color: #60646e;
 }
 
 .indicador-hold {
-  position: relative;
+  position: absolute;
+  display: flex;
+  align-items: center;
   width: 0.3em;
   height: 0.3em;
-  top: 6.2em;
-  left: 5.5em;
+  top: 9em;
+  left: 5.3em;
   border-radius: 50%;
   background-color: #60646e;
 }
-
 .text-hold {
-  position: relative;
-  top: 10.3em;
-  left: 7.5em;
+  position: absolute;
+  left: -3em;
   font-size: 0.5em;
   color: #60646e;
 }
 /* Botones y controles inferiores */
-.controles-inf {
-  position: relative;
-  width: 25.8em;
-  height: 2em;
-  top: -30.7em;
-  left: 7.2em;
-}
 
 .btn-home {
-  position: relative;
+  position: absolute;
   width: 2em;
   height: 1.3em;
-  top: 0.1em;
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
 }
 
 .btn-vol-bajar {
-  position: relative;
+  position: absolute;
   width: 1.3em;
   height: 0.7em;
-  top: -1em;
   left: 3em;
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
 }
-
 .text-vol {
-  position: relative;
-  top: -3.3em;
+  position: absolute;
   left: 6em;
   font-size: 0.8em;
   color: #60646e;
 }
-
 .btn-vol-subir {
-  position: relative;
+  position: absolute;
   width: 1.3em;
   height: 0.7em;
-  top: -4.5em;
   left: 6.6em;
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
@@ -267,26 +295,23 @@ body {
 }
 
 .icono-psp {
-  position: relative;
-  top: -5.5em;
+  position: absolute;
   left: 9em;
 }
+
 .btn-display {
-  position: relative;
+  position: absolute;
   width: 1.3em;
   height: 0.7em;
-  top: -6.6em;
   left: 16em;
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
 }
-
 .btn-mute {
-  position: relative;
+  position: absolute;
   width: 1.3em;
   height: 0.7em;
-  top: -7.6em;
   left: 18em;
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
@@ -294,38 +319,31 @@ body {
 }
 
 .btn-select {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   width: 2em;
   height: 1.3em;
-  top: -9.1em;
   left: 20.5em;
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
 }
-
-.text-select {
-  position: relative;
-  top: -0.2em;
-  font-size: 0.5em;
-  color: #60646e;
-}
-
 .btn-start {
-  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
   width: 2em;
   height: 1.3em;
-  top: -10.6em;
   left: 23.5em;
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
 }
-
+.text-select,
 .text-start {
-  position: relative;
-  top: -0.2em;
-  left: 0.5em;
   font-size: 0.5em;
   color: #60646e;
 }
