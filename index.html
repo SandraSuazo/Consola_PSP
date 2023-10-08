@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="css/styles.css" />
+    <link rel="icon" type="image/x-icon" href="assets/fotos/play.png" />
     <title>PSP</title>
   </head>
   <body>
@@ -53,14 +54,14 @@
             </div>
           </div>
           <div class="joystick"></div>
-          <div class="indicador-bateria">
+          <div id="indicador-bateria">
             <img
               class="icono-bateria"
               src="assets/fotos/bateria.svg"
               alt="Icono bateria"
             />
           </div>
-          <div class="indicador-wifi">
+          <div id="indicador-wifi">
             <img
               class="icono-wifi"
               src="assets/fotos/wifi.svg"
@@ -69,35 +70,39 @@
           </div>
         </div>
         <!-- Pantalla -->
-        <div class="pantalla">
-          <video src=""></video>
+        <div class="pantalla" id="pantalla">
+          <video
+            id="video-intro"
+            class="video"
+            src="assets/videos/psp-intro.mp4"
+          ></video>
         </div>
         <!-- Controles y botones derechos -->
         <p class="text-sony">SONY</p>
         <div class="controles-dcha">
           <div class="altavoz alt-dcha"></div>
           <div class="btns-iconos">
-            <div class="btn-icono triangulo">
+            <div class="btn-icono triangulo" onclick="btnTriangulo()">
               <img src="assets/fotos/triangulo.svg" alt="Icono triangulo" />
             </div>
-            <div class="btn-icono circulo">
+            <div class="btn-icono circulo" onclick="btnCirculo()">
               <img src="assets/fotos/circulo.svg" alt="Icono circulo" />
             </div>
-            <div class="btn-icono cruz">
+            <div class="btn-icono cruz" onclick="btnCruz()">
               <img
                 class="icono-cruz"
                 src="assets/fotos/cruz.svg"
                 alt="Icono cruz"
               />
             </div>
-            <div class="btn-icono cuadrado">
+            <div class="btn-icono cuadrado" onclick="btnCuadrado()">
               <img src="assets/fotos/cuadrado.svg" alt="Icono cuadrado" />
             </div>
           </div>
-          <div class="indicador-power">
+          <div id="indicador-power" onclick="offOn()">
             <div class="text-power"><p>POWER</p></div>
           </div>
-          <div class="indicador-hold">
+          <div id="indicador-hold">
             <div class="text-hold"><p>HOLD</p></div>
           </div>
         </div>
@@ -122,10 +127,10 @@
               alt="Icono mute"
             />
           </div>
-          <div class="btn-select">
-            <div class="text-select"><p>SELECT</p></div>
+          <div class="btn-exit">
+            <div class="text-exit"><p>EXIT</p></div>
           </div>
-          <div class="btn-start">
+          <div class="btn-start" onclick="startMenu()">
             <div class="text-start"><p>START</p></div>
           </div>
         </div>

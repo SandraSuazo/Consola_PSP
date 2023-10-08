@@ -17,6 +17,7 @@ body {
   height: 17em;
   border-radius: 10% / 50%;
   background-color: #fbfbf9;
+  user-select: none;
 }
 
 .controles-izq {
@@ -48,6 +49,10 @@ body {
   top: -17em;
   left: 7.4em;
   background-color: black;
+}
+.video {
+  width: 25.3em;
+  height: 13.5em;
 }
 
 .altavoz {
@@ -180,7 +185,7 @@ body {
   background-color: #f1f1ea;
 }
 
-.indicador-bateria {
+#indicador-bateria {
   position: absolute;
   width: 0.3em;
   height: 0.3em;
@@ -195,7 +200,7 @@ body {
     left: 0.6em;
   }
 }
-.indicador-wifi {
+#indicador-wifi {
   position: absolute;
   width: 0.3em;
   height: 0.3em;
@@ -243,6 +248,10 @@ body {
   align-items: center;
   top: 0.1em;
   left: 1.9em;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid #60646e;
+  }
 }
 .circulo {
   display: flex;
@@ -250,6 +259,10 @@ body {
   align-items: center;
   top: 1.9em;
   right: 0.1em;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid #60646e;
+  }
 }
 .cruz {
   display: flex;
@@ -257,6 +270,10 @@ body {
   align-items: center;
   bottom: 0.1em;
   left: 1.9em;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid #60646e;
+  }
   .icono-cruz {
     width: 2.7em;
   }
@@ -267,9 +284,13 @@ body {
   align-items: center;
   top: 1.9em;
   left: 0.1em;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid #60646e;
+  }
 }
 
-.indicador-power {
+#indicador-power {
   position: absolute;
   display: flex;
   align-items: center;
@@ -279,6 +300,7 @@ body {
   left: 6em;
   border-radius: 50%;
   background-color: #60646e;
+  cursor: pointer;
   .text-power {
     position: absolute;
     left: -4em;
@@ -287,7 +309,7 @@ body {
   }
 }
 
-.indicador-hold {
+#indicador-hold {
   position: absolute;
   display: flex;
   align-items: center;
@@ -401,7 +423,7 @@ body {
   }
 }
 
-.btn-select {
+.btn-exit {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -412,7 +434,7 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
-  .text-select {
+  .text-exit {
     font-size: 0.5em;
     color: #60646e;
   }
@@ -428,8 +450,36 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid #60646e;
+  }
   .text-start {
     font-size: 0.5em;
     color: #60646e;
+  }
+}
+
+/* Menú Interactivo */
+.menu-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 25.3em;
+  height: 13.5em;
+  background-image: url("../assets/fotos/fondo.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  .menu-opciones {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15em;
+    height: 4em;
+    font-weight: bold;
+    color: #222;
+    border: 1px solid #222;
+    border-radius: 10px;
+    background-color: #f7f7f3;
   }
 }
