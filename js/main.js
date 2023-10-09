@@ -26,6 +26,7 @@ const offOn = () => {
     hold.style.backgroundColor = "#60646e";
     bateria.style.backgroundColor = "#60646e";
     wifi.style.backgroundColor = "#60646e";
+    pantalla.style.backgroundImage = "none";
     video.remove();
   }
 };
@@ -62,7 +63,8 @@ const btnCirculo = () => {
   if (circulo === true) {
     video.remove();
     menu.remove();
-    pantalla.style.backgroundImage = "url('https://media.giphy.com/media/g4ODNTnpEBrmsghYtD/giphy.gif')";
+    pantalla.style.backgroundImage =
+      "url('https://media.giphy.com/media/g4ODNTnpEBrmsghYtD/giphy.gif')";
     circulo = false;
   } else {
     pantalla.style.backgroundImage = "none";
@@ -73,19 +75,20 @@ const btnCruz = () => {
   if (cruz === true) {
     video.remove();
     menu.remove();
-    pantalla.style.backgroundImage = "url('https://media.giphy.com/media/fSvqyvXn1M3btN8sDh/giphy.gif')";
+    pantalla.style.backgroundImage =
+      "url('https://media.giphy.com/media/fSvqyvXn1M3btN8sDh/giphy.gif')";
     cruz = false;
   } else {
     pantalla.style.backgroundImage = "none";
   }
 };
 
-
 const btnCuadrado = () => {
   if (cuadrado === true) {
     video.remove();
     menu.remove();
-    pantalla.style.backgroundImage = "url('https://media.giphy.com/media/p3u5hSm8BXRNBnm8OD/giphy.gif')";
+    pantalla.style.backgroundImage =
+      "url('https://media.giphy.com/media/p3u5hSm8BXRNBnm8OD/giphy.gif')";
     cuadrado = false;
   } else {
     pantalla.style.backgroundImage = "none";
