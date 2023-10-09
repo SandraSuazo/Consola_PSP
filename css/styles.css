@@ -450,10 +450,6 @@ body {
   border-radius: 40% / 80%;
   border: 2px solid #b5b5b5;
   background-color: #f7f7f3;
-  cursor: pointer;
-  &:hover {
-    border: 1px solid #60646e;
-  }
   .text-start {
     font-size: 0.5em;
     color: #60646e;
