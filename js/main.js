@@ -47,68 +47,36 @@ const crearInicio = () => {
   return menu;
 };
 
+const limpiarPantalla = () => {
+  setTimeout(() => {
+    pantalla.innerHTML = "";
+    pantalla.style.backgroundImage = "";
+    crearInicio();
+  }, 3000);
+};
+
 const cambiarGif = (forma) => {
   if (pspPower) {
     if (forma === "triangulo") {
-      if (triangulo) {
-        pantalla.style.backgroundImage = "";
-        triangulo = false;
-      } else {
-        pantalla.innerHTML = "";
-        pantalla.style.backgroundImage =
-          "url('https://media.giphy.com/media/l03Ko3C4HIXEoAjMpI/giphy.gif')";
-        setInterval(() => {
-          pantalla.innerHTML = "";
-          crearInicio();
-          pantalla.style.backgroundImage = "";
-        }, 2000);
-        triangulo = true;
-      }
+      pantalla.innerHTML = "";
+      pantalla.style.backgroundImage =
+        "url('https://media.giphy.com/media/GK6KacgGJZ4OgsgCAC/giphy.gif')";
+      limpiarPantalla();
     } else if (forma === "circulo") {
-      if (circulo) {
-        pantalla.style.backgroundImage = "";
-        circulo = false;
-      } else {
-        pantalla.innerHTML = "";
-        pantalla.style.backgroundImage =
-          "url('https://media.giphy.com/media/g4ODNTnpEBrmsghYtD/giphy.gif')";
-        setInterval(() => {
-          pantalla.innerHTML = "";
-          crearInicio();
-          pantalla.style.backgroundImage = "";
-        }, 2000);
-        circulo = true;
-      }
+      pantalla.innerHTML = "";
+      pantalla.style.backgroundImage =
+        "url('https://media.giphy.com/media/NMBleBfUcpzC8/giphy.gif')";
+      limpiarPantalla();
     } else if (forma === "cruz") {
-      if (cruz) {
-        pantalla.style.backgroundImage = "";
-        cruz = false;
-      } else {
-        pantalla.innerHTML = "";
-        pantalla.style.backgroundImage =
-          "url('https://media.giphy.com/media/g4ODNTnpEBrmsghYtD/giphy.gif')";
-        setInterval(() => {
-          pantalla.innerHTML = "";
-          crearInicio();
-          pantalla.style.backgroundImage = "";
-        }, 2000);
-        cruz = true;
-      }
+      pantalla.innerHTML = "";
+      pantalla.style.backgroundImage =
+        "url('https://media.giphy.com/media/MCFLzm0hOyeJPD4K7H/giphy.gif')";
+      limpiarPantalla();
     } else if (forma === "cuadrado") {
-      if (cuadrado) {
-        pantalla.style.backgroundImage = "";
-        cuadrado = false;
-      } else {
-        pantalla.innerHTML = "";
-        pantalla.style.backgroundImage =
-          "url('https://media.giphy.com/media/g4ODNTnpEBrmsghYtD/giphy.gif')";
-        setInterval(() => {
-          pantalla.innerHTML = "";
-          crearInicio();
-          pantalla.style.backgroundImage = "";
-        }, 2000);
-        cuadrado = true;
-      }
+      pantalla.innerHTML = "";
+      pantalla.style.backgroundImage =
+        "url('https://media.giphy.com/media/fSvqyvXn1M3btN8sDh/giphy.gif')";
+      limpiarPantalla();
     }
   } else {
     pantalla.innerHTML = "";
