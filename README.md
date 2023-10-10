@@ -1,28 +1,23 @@
 # PSP
 
-![PSP](assets/readme/Captura%20de%20pantalla%202023-10-09%20a%20las%209.02.08.png)
-Este es el README de la PSP, donde te enseñaré las diferentes funciones que tiene.
+![PSP](assets/readme/psp.png)
+En este Readme os presento mi versión de la PSP y las diferentes funciones que he añadido.
 
 ## Tecnologías utilizadas.
-·HTML
-·CSS
-·JavaScript
+
+- HTML
+- CSS
+- JavaScript
 
 ## Manejo y funcionamiento
 
 - **Encendido:** Cuando presionas el botón de power de abajo a la derecha, se inicia el video de introdución.
-![onOff](assets/readme/Captura%20de%20pantalla%202023-10-09%20a%20las%209.03.20.png)
-- **Start:** Para comenzar a disfrutar de las funciones es extrictamente necesario presionar al botón de START. 
-![Start](assets/readme/Captura%20de%20pantalla%202023-10-09%20a%20las%209.03.52.png)
-![Home](assets/home2.png)
-- **Botones:** En los botones de la parte de la derecha podrás encontrar diferentes gif.
-![Botón](assets/readme/Captura%20de%20pantalla%202023-10-09%20a%20las%209.15.20.png)
-![Botón](assets/readme/Captura%20de%20pantalla%202023-10-09%20a%20las%209.15.28.png)
-![Botón](assets/readme/Captura%20de%20pantalla%202023-10-09%20a%20las%209.15.44.png)
-![Botón](assets/readme/Captura%20de%20pantalla%202023-10-09%20a%20las%209.15.37.png)
+  ![PSP on](assets/readme/video-inicio.png)
+- **Start:** Una vez terminado el video de introducción, nos aparecerá una pantalla con la indicación de pulsar algún botón.
+  ![Start](assets/readme/pantalla-menu.png)
+- **Botones:** Cada botón de la derecha emite un gif al pulsarlo. Si permaneces viendo dicho gif más de 3 segundos, volverá a aparecer la pantalla de inicio.
 
 ## Información de Contacto
 
 - **Dirección:** Edificio Talent Garden. Calle de Juan de Marina 15, Madrid.
 - **Teléfono:** +34 123-456-789
-
