@@ -2,96 +2,115 @@ const power = document.getElementById("indicador-power");
 const hold = document.getElementById("indicador-hold");
 const bateria = document.getElementById("indicador-bateria");
 const wifi = document.getElementById("indicador-wifi");
-const video = document.getElementById("video-intro");
 const pantalla = document.getElementById("pantalla");
-let pspOn;
+let pspPower = false;
 let menu;
 let opcion;
-let triangulo = true;
-let circulo = true;
-let cruz = true;
-let cuadrado = true;
+let triangulo = false;
+let circulo = false;
+let cruz = false;
+let cuadrado = false;
 
 const offOn = () => {
-  if (pspOn) {
-    power.style.backgroundColor = "lawngreen";
-    hold.style.backgroundColor = "lawngreen";
-    bateria.style.backgroundColor = "red";
-    wifi.style.backgroundColor = "orange";
-    video.play();
-    video.addEventListener("ended", () => {
-      menu = document.createElement("div");
-      menu.classList.add("menu-container");
-      pantalla.appendChild(menu);
-      opcion = document.createElement("div");
-      opcion.classList.add("menu-opciones");
-      opcion.innerText = "¡¡Pulsa algún botón!!";
-      menu.appendChild(opcion);
-      video.replaceWith(menu);
-    });
-    pspOn = false;
-  } else {
+  if (pspPower) {
     power.style.backgroundColor = "#60646e";
     hold.style.backgroundColor = "#60646e";
     bateria.style.backgroundColor = "#60646e";
     wifi.style.backgroundColor = "#60646e";
-    video.pause();
-    video.currentTime = 0;
-    pspOn = true;
+    pantalla.innerHTML = "";
+    pantalla.style.backgroundImage = "";
+    pspPower = false;
+  } else {
+    power.style.backgroundColor = "lawngreen";
+    hold.style.backgroundColor = "lawngreen";
+    bateria.style.backgroundColor = "red";
+    wifi.style.backgroundColor = "orange";
+    pspPower = true;
+    pantalla.innerHTML =
+      '<video id="video-intro" class="video" src="assets/videos/psp-intro.mp4"></video>';
+    const videoIntro = document.getElementById("video-intro");
+    videoIntro.play();
+    videoIntro.addEventListener("ended", () => {
+      videoIntro.replaceWith(crearInicio());
+    });
+  }
+};
+
+const crearInicio = () => {
+  menu = document.createElement("div");
+  menu.classList.add("menu-container");
+  pantalla.appendChild(menu);
+  opcion = document.createElement("div");
+  opcion.classList.add("menu-opciones");
+  opcion.innerText = "¡¡Pulsa algún botón!!";
+  menu.appendChild(opcion);
+  return menu;
+};
+
+const cambiarGif = (forma) => {
+  if (pspPower) {
+    if (forma === "triangulo") {
+      if (triangulo) {
+        pantalla.style.backgroundImage = "";
+        triangulo = false;
+      } else {
+        pantalla.innerHTML = "";
+        pantalla.style.backgroundImage =
+          "url('https://media.giphy.com/media/l03Ko3C4HIXEoAjMpI/giphy.gif')";
+        setInterval(() => {
+          pantalla.innerHTML = "";
+          crearInicio();
+          pantalla.style.backgroundImage = "";
+        }, 2000);
+        triangulo = true;
+      }
+    } else if (forma === "circulo") {
+      if (circulo) {
+        pantalla.style.backgroundImage = "";
+        circulo = false;
+      } else {
+        pantalla.innerHTML = "";
+        pantalla.style.backgroundImage =
+          "url('https://media.giphy.com/media/g4ODNTnpEBrmsghYtD/giphy.gif')";
+        setInterval(() => {
+          pantalla.innerHTML = "";
+          crearInicio();
+          pantalla.style.backgroundImage = "";
+        }, 2000);
+        circulo = true;
+      }
+    } else if (forma === "cruz") {
+      if (cruz) {
+        pantalla.style.backgroundImage = "";
+        cruz = false;
+      } else {
+        pantalla.innerHTML = "";
+        pantalla.style.backgroundImage =
+          "url('https://media.giphy.com/media/g4ODNTnpEBrmsghYtD/giphy.gif')";
+        setInterval(() => {
+          pantalla.innerHTML = "";
+          crearInicio();
+          pantalla.style.backgroundImage = "";
+        }, 2000);
+        cruz = true;
+      }
+    } else if (forma === "cuadrado") {
+      if (cuadrado) {
+        pantalla.style.backgroundImage = "";
+        cuadrado = false;
+      } else {
+        pantalla.innerHTML = "";
+        pantalla.style.backgroundImage =
+          "url('https://media.giphy.com/media/g4ODNTnpEBrmsghYtD/giphy.gif')";
+        setInterval(() => {
+          pantalla.innerHTML = "";
+          crearInicio();
+          pantalla.style.backgroundImage = "";
+        }, 2000);
+        cuadrado = true;
+      }
+    }
+  } else {
     pantalla.innerHTML = "";
   }
 };
-
-/*
-
-const btnTriangulo = () => {
-  if (triangulo && pspOn) {
-    video.remove();
-    menu.remove();
-    pantalla.style.backgroundImage =
-      "url('https://media.giphy.com/media/l03Ko3C4HIXEoAjMpI/giphy.gif')";
-    triangulo = false;
-  } else {
-    triangulo = true;
-    pantalla.style.backgroundImage = "none";
-  }
-};
-
-const btnCirculo = () => {
-  if (circulo && pspOn) {
-    video.remove();
-    menu.remove();
-    pantalla.style.backgroundImage =
-      "url('https://media.giphy.com/media/g4ODNTnpEBrmsghYtD/giphy.gif')";
-    circulo = false;
-  } else {
-    circulo = true;
-    pantalla.style.backgroundImage = "none";
-  }
-};
-
-const btnCruz = () => {
-  if (cruz && pspOn) {
-    video.remove();
-    menu.remove();
-    pantalla.style.backgroundImage =
-      "url('https://media.giphy.com/media/fSvqyvXn1M3btN8sDh/giphy.gif')";
-    cruz = false;
-  } else {
-    cruz = true;
-    pantalla.style.backgroundImage = "none";
-  }
-};
-
-const btnCuadrado = () => {
-  if (cuadrado && pspOn) {
-    video.remove();
-    menu.remove();
-    pantalla.style.backgroundImage =
-      "url('https://media.giphy.com/media/p3u5hSm8BXRNBnm8OD/giphy.gif')";
-    cuadrado = false;
-  } else {
-    cuadrado = true;
-    pantalla.style.backgroundImage = "none";
-  }
-}; */
